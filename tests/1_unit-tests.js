@@ -20,18 +20,18 @@ suite('Unit Tests', function () {
       assert.isOk("I'm truthy", 'a string is truthy');
       assert.isOk(true, 'true is truthy');
     });
-    // #4
-    test('#isTrue, #isNotTrue', function () {
-      assert.isTrue(true, 'true is true');
-      assert.isTrue(!!'double negation', 'double negation of a truthy is true');
-      assert.isNotTrue({ value: 'truthy' }, 'A truthy object is NOT TRUE (neither is false...)');
-    });
+    // // #4
+    // test('#isTrue, #isNotTrue', function () {
+    //   assert.isTrue(true, 'true is true');
+    //   assert.isTrue(!!'double negation', 'double negation of a truthy is true');
+    //   assert.isNotTrue({ value: 'truthy' }, 'A truthy object is NOT TRUE (neither is false...)');
+    // });
   });
 
   // -----------------------------------------------------------------------------
 
   // suite('Equality', function () {
-    // #5
+    // #4
     test('#equal, #notEqual', function () {
       assert.equal(12, '12', 'numbers are coerced into strings with == ');
       assert.notEqual({ value: 1 }, { value: 1 }, '== compares object references');
