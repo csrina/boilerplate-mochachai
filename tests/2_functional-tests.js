@@ -30,24 +30,34 @@ suite("Functional Tests", function () {
           done();
         });
     });
-    // // #3
-    // test('send {surname: "Colombo"}', function (done) {
-    //   chai
-    //     .request(server)
-    //     .put("/travellers")
-
-    //     .end(function (err, res) {
-    //       assert.fail();
-
-    //       done();
-    //     });
-    // });
-    // // #4
-    // test('send {surname: "da Verrazzano"}', function (done) {
-    //   assert.fail();
-
-    //   done();
-    // });
+    // #3
+    test('send {surname: "Colombo"}', function (done) {
+      chai
+        .request(server)
+        .put("/travellers")
+        .send({"surname": "Colombo"})
+        .end(function (err, res) {
+            assert.equal(res.status, 200);
+            assert.typeOf(res.body, "object");
+            assert.equal(res.body.name, "Cristoforo");
+            assert.equal(res.body.surname, "Colombo");
+            done();
+        });
+    });
+    // #4
+    test('send {surname: "da Verrazzano"}', function (done) {
+        chai
+            .request(server)
+            .put("/travellers")
+            .send({"surname": "da Verrazzano"})
+            .end(function (err, res) {
+                assert.equal(res.status, 200);
+                assert.typeOf(res.body, "object");
+                assert.equal(res.body.name, "Giovanni");
+                assert.equal(res.body.surname, "da Verrazzano");
+                done();
+            });
+    });
   });
 });
 
