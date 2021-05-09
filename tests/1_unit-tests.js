@@ -40,7 +40,7 @@ suite('Unit Tests', function () {
     });
     // #6
     test('#strictEqual, #notStrictEqual', function () {
-      assert.notStrictEqual (6, '6', "on is a number the other is a string");
+      assert.notStrictEqual(6, '6', "on is a number the other is a string");
       assert.strictEqual(6, 3 * 2, "both should equal 6");
       assert.strictEqual(6 * '2', 12, "both should equal 12");
       assert.notStrictEqual([1, 'a', {}], [1, 'a', {}], "the two arrays are the same but because the last item is an object it will fail");
