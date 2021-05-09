@@ -80,16 +80,16 @@ suite("Functional Tests with Zombie.js", function () {
             done();
             });
         });
+    
+        // #6
+        test('submit "surname" : "Vespucci" - write your e2e test...', function (done) {
+        browser.fill("surname", "Vespucci").pressButton("submit", function () {
+            browser.assert.success();
+            browser.assert.text('span#name', 'Amerigo');
+            browser.assert.text('span#surname', 'Vespucci');
+            browser.assert.element('span#dates', 1);
+            done();
+        })
+        });
     });
-    // #6
-    test('submit "surname" : "Vespucci" - write your e2e test...', function (done) {
-       browser.fill("surname", "Vespucci").pressButton("submit", function () {
-        browser.assert.success();
-        browser.assert.text('span#name', 'Amerigo');
-        browser.assert.text('span#surname', 'Vespucci');
-        browser.assert.element('span#dates', 1);
-        done();
-       })
-    });
-
 });
