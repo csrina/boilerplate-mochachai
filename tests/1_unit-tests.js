@@ -66,18 +66,18 @@ suite('Unit Tests', function () {
       assert.isAbove(Math.PI, 3);
       assert.isAtMost(1 - Math.random(), 1);
     });
-  //   // #9
-  //   test('#isBelow, #isAtLeast', function () {
-  //     assert.fail('world'.length, 5);
-  //     assert.fail(2 * Math.random(), 0);
-  //     assert.fail(5 % 2, 2);
-  //     assert.fail(2 / 3, 1);
-  //   });
-  //   // #10
-  //   test('#approximately', function () {
-  //     assert.fail(weirdNumbers(0.5), 1, 0);
-  //     assert.fail(weirdNumbers(0.2), 1, 0);
-  //   });
+    // #9
+    test('#isBelow, #isAtLeast', function () {
+      assert.isAtLeast('world'.length, 5), "worldd is 5 letters long";
+      assert.isAtLeast(2 * Math.random(), 0), "since random can be 0 or higher so is at least is accurate";
+      assert.isBelow(5 % 2, 2, "5%2 should 1 which os below 2");
+      assert.isBelow(2 / 3, 1, "2/3 is 0.6666 which is below 0");
+    });
+    // #10
+    test('#approximately', function () {
+      assert.approximately(weirdNumbers(0.5), 1, 0.5);
+      assert.approximately(weirdNumbers(0.2), 1, 0.2);
+    });
   });
 
   // // -----------------------------------------------------------------------------
