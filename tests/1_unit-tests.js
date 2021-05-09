@@ -38,13 +38,13 @@ suite('Unit Tests', function () {
       assert.equal(6 * '2', '12', 'no more hints...');
       assert.notEqual(6 + '2', '12', 'type your error message if you want');
     });
-  //   // #6
+    // #6
     test('#strictEqual, #notStrictEqual', function () {
       assert.notStrictEqual (6, '6');
       assert.strictEqual(6, 3 * 2);
       assert.strictEqual(6 * '2', 12);
       assert.notStrictEqual([1, 'a', {}], [1, 'a', {}]);
-    });
+    }); 
   //   // #7
   //   test('#deepEqual, #notDeepEqual', function () {
   //     assert.fail({ a: '1', b: 5 }, { b: 5, a: '1' }, "keys order doesn't matter");
